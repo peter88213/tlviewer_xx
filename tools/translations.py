@@ -1,7 +1,7 @@
 """Provide a class to handle GNU gettext translation files.
 
 Copyright (c) 2025 Peter Triesberger
-For further information see https://github.com/peter88213/PyWriter
+For further information see https://github.com/peter88213/tlviewer_xx
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import sys
@@ -11,7 +11,6 @@ from string import Template
 from datetime import datetime
 from settings import *
 
-JSON_DICT = '../dictionary/msg_dict.json'
 
 poHeader = '''\
 # ${app} Dictionary (English-${languageName})
@@ -42,7 +41,6 @@ class Translations:
     """
 
     def __init__(self, potPath, app=''):
-        self.lngFile = f'{JSON_DICT}'
         self.poFile = f'{potPath}/{languageCode}.po'
         self.potFile = f'{potPath}/messages.pot'
         self.msgDict = {}
