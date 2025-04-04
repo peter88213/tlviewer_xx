@@ -17,7 +17,7 @@ except ModuleNotFoundError:
     print('The tkinter module is missing. Please install the tk support package for your python3 version.')
     sys.exit(1)
 
-LANGUAGE_PACK = 'nv_tlview_xx'
+APP = 'tlviewer'
 
 root = Tk()
 processInfo = Label(root, text='')
@@ -54,7 +54,7 @@ def main(zipped=True):
 
     # Open a tk window.
     root.geometry("600x150")
-    root.title(f'Install {LANGUAGE_PACK}')
+    root.title(f'Install language pack for {APP}')
     header = Label(root, text='')
     header.pack(padx=5, pady=5)
 
@@ -63,11 +63,11 @@ def main(zipped=True):
 
     # Install the language pack.
     homePath = str(Path.home()).replace('\\', '/')
-    applicationDir = f'{homePath}/.tlviewer'
+    applicationDir = f'{homePath}/.{APP}'
     if os.path.isdir(applicationDir):
         output('Copying locale ...')
         copy_tree('locale', applicationDir)
-        output(f'Sucessfully installed "{LANGUAGE_PACK}" at "{os.path.normpath(applicationDir)}"')
+        output(f'Sucessfully installed the language pack at "{os.path.normpath(applicationDir)}"')
     else:
         output(f'ERROR: Cannot find a tlviewer installation at "{applicationDir}"')
 

@@ -6,11 +6,9 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import sys
 import os
-import json
 from string import Template
 from datetime import datetime
 from settings import *
-
 
 poHeader = '''\
 # ${app} Dictionary (English-${languageName})
