@@ -1,6 +1,6 @@
 # tlviewer_xx has moved to [Codeberg](https://codeberg.org/peter88213/tlviewer_xx)
 
-Language pack for the [timeline-view-tk](https://github.com/peter88213/timeline-view-tk) application.
+Language pack template for the [timeline-view-tk](https://github.com/peter88213/timeline-view-tk) application.
 
 ---
 
